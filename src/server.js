@@ -1,8 +1,9 @@
 var XMPP = require('stanza.io'); // if using browserify
 
 var client = XMPP.createClient({
-    jid: '63d1911e-6de3-49d6-8d09-4f4fa39ab7db@ejabberd.sandwitch.in',
-    password: 'irctc',
+    // Email - deploymentbotdrawers@gmail.com to get you username and password.
+    jid: 'jid@ejabberd.sandwitch.in',
+    password: 'jid',
 
     // If you have a .well-known/host-meta.json file for your
     // domain, the connection transport config can be skipped.
