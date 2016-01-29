@@ -1,0 +1,30 @@
+{
+  "name": "kaiwa.im",
+  "description": "Kaiwa: XMPP Client in the Browser",
+  "version": "1.0.0",
+  "browser": {
+    "crypto": "crypto-browserify"
+  },
+  "scripts": {
+    "compile": "gulp compile",
+    "start": "node ./src/server.js"
+  },
+  "dependencies": {
+    "stanza.io": "^7.3.4"
+  },
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-stylus": "^2.0.6",
+    "gulp-watch": "^4.3.5",
+    "merge-stream": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

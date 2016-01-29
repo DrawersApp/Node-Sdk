@@ -1,0 +1,8 @@
+/node_modules/
+/.idea/
+/build/
+/src/js/templates.js
+/public/
+/typings/
+/dev_config.json
+/workspace.xml
