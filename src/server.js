@@ -1,34 +1,35 @@
-var XMPP = require('stanza.io'); // if using browserify
+var XMPP = require('stanza.io');
 
 var client = XMPP.createClient({
-    jid: '63d1911e-6de3-49d6-8d09-4f4fa39ab7db@ejabberd.sandwitch.in',
-    password: 'irctc',
-
-    // If you have a .well-known/host-meta.json file for your
-    // domain, the connection transport config can be skipped.
+    // Add you credentials.
+    jid: 'jid@ejabberd.sandwitch.in',
+    password: 'jid',
 
     transport: 'websocket',
     wsURL: 'ws://ejabberd.sandwitch.in:5280/websocket'
-    // (or `boshURL` if using 'bosh' as the transport)
 });
 
+// Bot logged in.
 client.on('session:started', function () {
     client.getRoster();
     client.sendPresence();
     console.log("Session started");
 });
 
+// TODO - Main method to override..
 client.on('chat', function (msg) {
+    var input = msg.body;
+    var output = input; // This is the input from chat. Generate the output based on it - make rest, jdbc, or anything else :).
     client.sendMessage({
       to: msg.from,
       type: 'chat',
       requestReceipt: true,
       id: client.nextId(),
-      body: 'You sent: ' + msg.body,
+      body: 'You sent: ' + output,
       json: 
       {
-         subType: 'TEXT',
-         message: msg.body,
+         subType: 'TEXT', // subtype can be 'TEXT', 'IMAGE', 'VIDEO', 'CONTACT', 'LOCATION', 'FILE'.
+         message: output,
          timestamp: Date.now()
       }
     });
