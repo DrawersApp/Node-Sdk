@@ -1,10 +1,9 @@
 var XMPP = require('stanza.io');
 
 var client = XMPP.createClient({
-    // Add you credentials.
+    // Email - deploymentbotdrawers@gmail.com to get you username and password.
     jid: 'jid@ejabberd.sandwitch.in',
     password: 'jid',
-
     transport: 'websocket',
     wsURL: 'ws://ejabberd.sandwitch.in:5280/websocket'
 });
