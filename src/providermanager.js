@@ -1,9 +1,9 @@
 /**
  * Created by harshit on 21/2/16.
  */
-var message = require('./message')
-var chatState = require('./chatstate')
-var deliveryReceipt = require('./deliveryreceipt')
+var message = require('./message');
+var chatState = require('./chatstate');
+var deliveryReceipt = require('./deliveryreceipt');
 var providerManager = (function () {
 
     var providerManagerInstance;

@@ -32,7 +32,7 @@ function MqttChat(messageId, senderId, message, chatType, deliveryReceipt, uid) 
 function MessageProvider() {
 
     this.processStanza = function(topic, mqttStanaza, client) {
-        var message = JSON.parse(mqttStanaza);
+        var message = JSON.parse(mqttStanaza.toString());
         console.log(message.m);
 
         if (message.d) {

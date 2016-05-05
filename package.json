@@ -1,6 +1,6 @@
 {
-  "name": "kaiwa.im",
-  "description": "Kaiwa: XMPP Client in the Browser",
+  "name": "node-bot",
+  "description": "Drawers node bot based on mqtt.js",
   "version": "1.0.0",
   "browser": {
     "crypto": "crypto-browserify"

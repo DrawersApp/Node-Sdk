@@ -41,7 +41,7 @@ var providerManager = require('./providermanager');
 // Simulate pure virtual inheritance/"implement" keyword for JS
 
 
-var clientId = '62727ffb-9072-4e3e-b7c5-4f9235a426db';
+var clientId = 'b850be65-387e-4c4a-a8b3-d3e2b08677d2';
 var messageChannel = "/o/m";
 var presenceChannel = "/s/l";
 var options = {
@@ -56,10 +56,11 @@ var options = {
         retain : true
     }
 };
-var client  = mqtt.connect('mqtt://ec2-54-169-241-61.ap-southeast-1.compute.amazonaws.com:1883', options);
+var client  = mqtt.connect('mqtt://ec2-52-76-99-168.ap-southeast-1.compute.amazonaws.com:1883', options);
 
 client.on('connect', function () {
     client.subscribe(clientId + messageChannel);
+    console.log("connected");
     //client.publish('presence', 'Hello mqtt', publishOptions, publishContainerInstance.publishCallBack);
 });
 
